@@ -24,7 +24,17 @@
 
 @implementation ADViewController
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+ 
+    UIView *btnView=  [[self.nativeAdView subviews] objectAtIndex:5];
+     btnView .hidden = YES;
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
@@ -108,6 +118,21 @@ didReceiveNativeContentAd:(GADNativeContentAd *)nativeContentAd {
     
     // In order for the SDK to process touch events properly, user interaction should be disabled.
     contentAdView.callToActionView.userInteractionEnabled = NO;
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    [self.nativeAdView addSubview:label];
+    label.backgroundColor = [UIColor greenColor];
+}
+
+//- (void)coverView {}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark GADVideoControllerDelegate implementation
