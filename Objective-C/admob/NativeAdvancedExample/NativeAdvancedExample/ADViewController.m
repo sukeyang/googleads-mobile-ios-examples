@@ -7,10 +7,12 @@
 //
 
 #import "ADViewController.h"
+#import "ADHeader.h"
+
 @import GoogleMobileAds;
 
 // Native Advanced ad unit ID for testing.
-static NSString *const TestAdUnit = @"ca-app-pub-3605983343885600/9160037596";
+//static NSString *const TestAdUnit = KGoogleAdUnit;
 
 @interface ADViewController ()<GADNativeContentAdLoaderDelegate>
 /// You must keep a strong reference to the GADAdLoader during the ad loading process.
@@ -32,13 +34,15 @@ static NSString *const TestAdUnit = @"ca-app-pub-3605983343885600/9160037596";
     NSMutableArray *adTypes = [[NSMutableArray alloc] init];
     [adTypes addObject:kGADAdLoaderAdTypeNativeContent];
     
-    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:TestAdUnit
+    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:KGoogleAdUnit
                                        rootViewController:self
                                                   adTypes:adTypes
                                                   options:@[ videoOptions ]];
     self.adLoader.delegate = self;
     
     GADRequest *request = [GADRequest request];
+//    request.testDevices = @[ kGADSimulatorID];
+     request.testDevices = @[ kGADSimulatorID,@"25464f41f7c187772b0f96eb93f8704e"];
 //    request.testDevices = @[ kGADSimulatorID,                       // All simulators
 //                             @"dfd727394d70f8ec74e894143c29c80ad1509f29" ]; // Sample device ID
     [self.adLoader loadRequest:request];

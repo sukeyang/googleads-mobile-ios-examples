@@ -14,9 +14,10 @@
 
 #import "ViewController.h"
 #import "ADViewController.h"
+#import "ADHeader.h"
 
 // Native Advanced ad unit ID for testing.
-static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/4270592515";
+//static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/4270592515";
 
 @interface ViewController () <GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate,
                               GADVideoControllerDelegate>
@@ -55,12 +56,14 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/4270592515";
     GADVideoOptions *videoOptions = [[GADVideoOptions alloc] init];
     videoOptions.startMuted = NO;
 
-    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:TestAdUnit
+    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:KGoogleAdUnit
                                        rootViewController:self
                                                   adTypes:adTypes
                                                   options:@[ videoOptions ]];
     self.adLoader.delegate = self;
-    [self.adLoader loadRequest:[GADRequest request]];
+      GADRequest *request = [GADRequest request];
+      request.testDevices = @[ kGADSimulatorID,@"25464f41f7c187772b0f96eb93f8704e"];
+    [self.adLoader loadRequest:request];
     self.videoStatusLabel.text = @"";
   }
 }

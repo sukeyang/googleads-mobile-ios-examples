@@ -15,6 +15,7 @@
 //
 
 #import "ViewController.h"
+#import "ADHeader.h"
 
 @import GoogleMobileAds;
 
@@ -88,12 +89,12 @@ static const NSInteger kGameLength = 5;
 
 - (void)createAndLoadInterstitial {
   self.interstitial =
-      [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/4411468910"];
+      [[GADInterstitial alloc] initWithAdUnitID:KGoogleAdUnit];
 
   GADRequest *request = [GADRequest request];
   // Request test ads on devices you specify. Your test device ID is printed to the console when
   // an ad request is made.
-  request.testDevices = @[ kGADSimulatorID, @"2077ef9a63d2b398840261c8221a0c9a" ];
+  request.testDevices = @[ kGADSimulatorID, @"25464f41f7c187772b0f96eb93f8704e" ];
   [self.interstitial loadRequest:request];
 }
 

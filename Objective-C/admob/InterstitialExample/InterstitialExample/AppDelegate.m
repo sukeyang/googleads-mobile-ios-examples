@@ -15,6 +15,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ADHeader.h"
 
 @import GoogleMobileAds;
 
@@ -28,7 +29,7 @@
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
   // Initialize Google Mobile Ads SDK
-  [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
+  [GADMobileAds configureWithApplicationID:KGoogleApplicationID];
 
   return YES;
 }

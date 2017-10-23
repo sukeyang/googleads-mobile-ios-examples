@@ -15,6 +15,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ADHeader.h"
 
 @import GoogleMobileAds;
 
@@ -29,7 +30,7 @@
 
   // Initialize Google Mobile Ads SDK
 //  [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3605983343885600~6928502219"];
+    [GADMobileAds configureWithApplicationID:KGoogleApplicationID];
   return YES;
 }
 
