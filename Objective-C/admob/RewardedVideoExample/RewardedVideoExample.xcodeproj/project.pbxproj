@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		786CE04BD51DA3CC42E78E1B /* libPods-RewardedVideoExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A5AF5F34DA5342D6DB10A5 /* libPods-RewardedVideoExample.a */; };
 		84E184631B30D695002ADFFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184621B30D695002ADFFB /* main.m */; };
 		84E184661B30D695002ADFFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184651B30D695002ADFFB /* AppDelegate.m */; };
 		84E184691B30D695002ADFFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E184681B30D695002ADFFB /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11A5AF5F34DA5342D6DB10A5 /* libPods-RewardedVideoExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RewardedVideoExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DA283133A452D0551C1ED0 /* Pods-RewardedVideoExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewardedVideoExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample.release.xcconfig"; sourceTree = "<group>"; };
+		6B42C94172F38679CEBF3292 /* Pods-RewardedVideoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RewardedVideoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample.debug.xcconfig"; sourceTree = "<group>"; };
 		84E1845D1B30D695002ADFFB /* RewardedVideoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewardedVideoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E184611B30D695002ADFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E184621B30D695002ADFFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786CE04BD51DA3CC42E78E1B /* libPods-RewardedVideoExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065977FF97DE8438D63D3043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11A5AF5F34DA5342D6DB10A5 /* libPods-RewardedVideoExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84E184541B30D695002ADFFB = {
 			isa = PBXGroup;
 			children = (
 				84E1845F1B30D695002ADFFB /* RewardedVideoExample */,
 				84E1845E1B30D695002ADFFB /* Products */,
+				AD1A83F9FC291DD02BDBB942 /* Pods */,
+				065977FF97DE8438D63D3043 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD1A83F9FC291DD02BDBB942 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B42C94172F38679CEBF3292 /* Pods-RewardedVideoExample.debug.xcconfig */,
+				69DA283133A452D0551C1ED0 /* Pods-RewardedVideoExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84E184801B30D695002ADFFB /* Build configuration list for PBXNativeTarget "RewardedVideoExample" */;
 			buildPhases = (
+				3538A55DAF4A730B64F4263D /* [CP] Check Pods Manifest.lock */,
 				84E184591B30D695002ADFFB /* Sources */,
 				84E1845A1B30D695002ADFFB /* Frameworks */,
 				84E1845B1B30D695002ADFFB /* Resources */,
+				02DDAA7BB42D86C2D3CBF207 /* [CP] Embed Pods Frameworks */,
+				40C08B83DCF0E199C4D725B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02DDAA7BB42D86C2D3CBF207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3538A55DAF4A730B64F4263D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40C08B83DCF0E199C4D725B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RewardedVideoExample/Pods-RewardedVideoExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84E184591B30D695002ADFFB /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		84E184811B30D695002ADFFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B42C94172F38679CEBF3292 /* Pods-RewardedVideoExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;
@@ -281,6 +357,7 @@
 		};
 		84E184821B30D695002ADFFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69DA283133A452D0551C1ED0 /* Pods-RewardedVideoExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;

@@ -13,9 +13,10 @@
 // limitations under the License.
 
 #import "ViewController.h"
+#import "ADViewController.h"
 
 // Native Advanced ad unit ID for testing.
-static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
+static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/4270592515";
 
 @interface ViewController () <GADNativeAppInstallAdLoaderDelegate, GADNativeContentAdLoaderDelegate,
                               GADVideoControllerDelegate>
@@ -39,9 +40,9 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
 - (IBAction)refreshAd:(id)sender {
   // Loads an ad for any of app install, content, or custom native ads.
   NSMutableArray *adTypes = [[NSMutableArray alloc] init];
-  if (self.appInstallAdSwitch.on) {
-    [adTypes addObject:kGADAdLoaderAdTypeNativeAppInstall];
-  }
+//  if (self.appInstallAdSwitch.on) {
+//    [adTypes addObject:kGADAdLoaderAdTypeNativeAppInstall];
+//  }
   if (self.contentAdSwitch.on) {
     [adTypes addObject:kGADAdLoaderAdTypeNativeContent];
   }
@@ -52,7 +53,7 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
     self.refreshButton.enabled = NO;
 
     GADVideoOptions *videoOptions = [[GADVideoOptions alloc] init];
-    videoOptions.startMuted = self.startMutedSwitch.on;
+    videoOptions.startMuted = NO;
 
     self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:TestAdUnit
                                        rootViewController:self
@@ -199,6 +200,13 @@ static NSString *const TestAdUnit = @"ca-app-pub-3940256099942544/3986624511";
 }
 
 #pragma mark GADNativeContentAdLoaderDelegate implementation
+
+- (IBAction)click:(id)sender {
+    ADViewController *adView = [[ADViewController alloc] init];
+    [self presentViewController:adView animated:YES completion:^{
+        
+    }];
+}
 
 - (void)adLoader:(GADAdLoader *)adLoader
     didReceiveNativeContentAd:(GADNativeContentAd *)nativeContentAd {

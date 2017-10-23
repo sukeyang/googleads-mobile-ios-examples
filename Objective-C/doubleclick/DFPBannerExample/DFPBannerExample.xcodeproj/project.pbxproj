@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		669C58035DE9B4DD3FE88551 /* libPods-DFPBannerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4218F1FB20A1AF8DDE0F0FFE /* libPods-DFPBannerExample.a */; };
 		CF12E28419A6C783001EB38A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF12E28319A6C783001EB38A /* main.m */; };
 		CF12E28719A6C783001EB38A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF12E28619A6C783001EB38A /* AppDelegate.m */; };
 		CF12E28A19A6C783001EB38A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF12E28919A6C783001EB38A /* ViewController.m */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207715041F3FE0EDF29837AA /* Pods-DFPBannerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFPBannerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample.release.xcconfig"; sourceTree = "<group>"; };
+		4218F1FB20A1AF8DDE0F0FFE /* libPods-DFPBannerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DFPBannerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		521F95FF34B61D45AABFF44C /* Pods-DFPBannerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFPBannerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		CF12E27E19A6C783001EB38A /* DFPBannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFPBannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF12E28219A6C783001EB38A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF12E28319A6C783001EB38A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669C58035DE9B4DD3FE88551 /* libPods-DFPBannerExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40FC7668733B3A16D994EBC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				521F95FF34B61D45AABFF44C /* Pods-DFPBannerExample.debug.xcconfig */,
+				207715041F3FE0EDF29837AA /* Pods-DFPBannerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF12E27519A6C783001EB38A = {
 			isa = PBXGroup;
 			children = (
 				CF12E28019A6C783001EB38A /* DFPBannerExample */,
 				CF12E27F19A6C783001EB38A /* Products */,
+				40FC7668733B3A16D994EBC2 /* Pods */,
+				F0D8F9C887FFB0617ABCF382 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +92,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F0D8F9C887FFB0617ABCF382 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4218F1FB20A1AF8DDE0F0FFE /* libPods-DFPBannerExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF12E29E19A6C783001EB38A /* Build configuration list for PBXNativeTarget "DFPBannerExample" */;
 			buildPhases = (
+				41A6AEF3893683B46CE92B06 /* [CP] Check Pods Manifest.lock */,
 				CF12E27A19A6C783001EB38A /* Sources */,
 				CF12E27B19A6C783001EB38A /* Frameworks */,
 				CF12E27C19A6C783001EB38A /* Resources */,
+				74D7B2710E7703B80B628C01 /* [CP] Embed Pods Frameworks */,
+				3B41CA94CE824D35682B88B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B41CA94CE824D35682B88B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41A6AEF3893683B46CE92B06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74D7B2710E7703B80B628C01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF12E27A19A6C783001EB38A /* Sources */ = {
@@ -254,6 +329,7 @@
 		};
 		CF12E29F19A6C783001EB38A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521F95FF34B61D45AABFF44C /* Pods-DFPBannerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -267,6 +343,7 @@
 		};
 		CF12E2A019A6C783001EB38A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207715041F3FE0EDF29837AA /* Pods-DFPBannerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
