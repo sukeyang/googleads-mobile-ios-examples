@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.backgroundColor = [UIColor redColor];
     GADVideoOptions *videoOptions = [[GADVideoOptions alloc] init];
     videoOptions.startMuted = NO;
     
@@ -57,9 +57,19 @@
     // Remove previous ad view.
     [self.nativeAdView removeFromSuperview];
     self.nativeAdView = view;
-    
+    self.nativeAdView.backgroundColor = [UIColor whiteColor];
+    self.nativeAdView.frame = CGRectMake(0, 0, 320, 400);
     // Add new ad view and set constraints to fill its container.
     [self.view addSubview:view];
+//    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_nativeAdView);
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_nativeAdView]|"
+//                                                                      options:0
+//                                                                      metrics:nil
+//                                                                        views:viewDictionary]];
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_nativeAdView]|"
+//                                                                      options:0
+//                                                                      metrics:nil
+//                                                                        views:viewDictionary]];
 }
 
 - (void)adLoader:(GADAdLoader *)adLoader

@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dke-a3-l6F">
-                    <rect key="frame" x="252" y="378" width="40" height="17"/>
+                    <rect key="frame" x="275" y="338" width="17" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="G3H-ST-yd0"/>
+                        <constraint firstAttribute="width" constant="17" id="G3H-ST-yd0"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertiser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVF-DW-6Jc">
-                    <rect key="frame" x="297" y="378" width="73" height="17"/>
+                    <rect key="frame" x="297" y="338" width="73" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="73" id="UuV-Si-gTQ"/>
                         <constraint firstAttribute="height" constant="17" id="Uzw-tO-cIu"/>
@@ -32,13 +32,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tYV-3h-p0P">
-                    <rect key="frame" x="0.0" y="0.0" width="370" height="400"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="400" id="RGd-0F-sW4"/>
+                        <constraint firstAttribute="height" constant="300" id="RGd-0F-sW4"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-GG-uJG">
-                    <rect key="frame" x="10" y="335" width="355" height="50"/>
+                    <rect key="frame" x="10" y="295" width="355" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="y5j-EB-OTb"/>
                     </constraints>
@@ -53,9 +53,9 @@
                 <constraint firstItem="tYV-3h-p0P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ape-xN-8Gp"/>
                 <constraint firstItem="FVF-DW-6Jc" firstAttribute="bottom" secondItem="4zQ-GG-uJG" secondAttribute="bottom" constant="10" id="CCa-vv-3aJ"/>
                 <constraint firstItem="FVF-DW-6Jc" firstAttribute="height" secondItem="dke-a3-l6F" secondAttribute="height" id="GGN-ig-2YW"/>
-                <constraint firstAttribute="trailing" secondItem="tYV-3h-p0P" secondAttribute="trailing" constant="5" id="IQL-Ps-UaV"/>
+                <constraint firstAttribute="trailing" secondItem="tYV-3h-p0P" secondAttribute="trailing" id="IQL-Ps-UaV"/>
                 <constraint firstItem="FVF-DW-6Jc" firstAttribute="top" secondItem="dke-a3-l6F" secondAttribute="top" id="RR6-64-x6i"/>
-                <constraint firstItem="tYV-3h-p0P" firstAttribute="bottom" secondItem="FVF-DW-6Jc" secondAttribute="bottom" constant="5" id="Zhd-D7-swh"/>
+                <constraint firstItem="tYV-3h-p0P" firstAttribute="bottom" secondItem="FVF-DW-6Jc" secondAttribute="bottom" constant="-55" id="Zhd-D7-swh"/>
                 <constraint firstItem="tYV-3h-p0P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cEy-1Z-rfF"/>
                 <constraint firstItem="4zQ-GG-uJG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="dvr-LV-Oid"/>
                 <constraint firstItem="FVF-DW-6Jc" firstAttribute="leading" secondItem="dke-a3-l6F" secondAttribute="trailing" constant="5" id="jZW-fd-tUf"/>

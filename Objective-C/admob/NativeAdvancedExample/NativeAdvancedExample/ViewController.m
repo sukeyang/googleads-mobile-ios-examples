@@ -76,6 +76,7 @@
   // Add new ad view and set constraints to fill its container.
   [self.nativeAdPlaceholder addSubview:view];
   [self.nativeAdView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
 
   NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_nativeAdView);
   [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_nativeAdView]|"
